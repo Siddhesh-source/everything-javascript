@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="rockpaper.css">
+</head>
+<body>
+    <h1>Rock Paper & Scissors</h1>
+
+    <div class="button"> 
+        <!-- First div for all buttons -->
+
+    <button class="rock" onclick="pickComputerMove(); 
+    let result='';
+
+    if (computerChoice=='Rock'){
+        result='Tie.';
+    }
+    else if (computerChoice=='Paper'){
+        result='You lose';
+    }
+    else if(computerChoice='Scissors'){
+        result='You Win.'
+    }
+    alert(`You picked Rock.Computer picked ${computerChoice}.${result}!!`)
+    ">Rock
+    </button>
+
+    <!-- 2nd button -->
+
+    <button class="paper" onclick="pickComputerMove();
+    let result='';
+
+if (computerChoice=='Rock'){
+    result='You Win.';
+}
+else if (computerChoice=='Paper'){
+    result='Tie';
+}
+else if(computerChoice='Scissors'){
+    result='You Lose.'
+}
+alert(`You picked Paper.Computer picked ${computerChoice}.${result}!!`)">Paper</button>
+
+    <!-- 3rd button -->
+
+    <button class="scissors" onclick="
+    pickComputerMove();
+    
+    let result='';
+
+    if (computerChoice=='Rock'){
+        result='You Lose';
+    }
+    else if (computerChoice=='Paper'){
+        result='You Win';
+    }
+    else if(computerChoice='Scissors'){
+        result='Tie.'
+    }
+    alert(`You picked Scissors.Computer picked ${computerChoice}.${result}!!`)">Scissors</button>
+    <script>
+
+
+        const score={
+            wins:0,
+            losses:0,
+            ties:0
+        };
+        let computerChoice='';
+        function pickMove(){
+            
+        }
+        function pickComputerMove(){
+            randomNumber=Math.random();
+            if (randomNumber<1/3 && randomNumber>=0){
+                computerChoice='Rock';
+            }
+            else if(randomNumber<2/3 && randomNumber>=1/3){
+                coomputerChoice='Paper';
+            }
+            else if(randomNumber<=1 && randomNumber>2/3){
+                computerChoice='Scissors';
+            }
+        }
+        // function matchWithHuman(){
+        //     let result='';
+        //     if (computerChoice='Rock'){
+        //         result='Rock';
+        //     }
+        //     else if (computerChoice='Paper'){
+        //         result='Paper';
+        //     }
+        //     else if(computerChoice='Scissors') {
+        //         result='Scissors';
+
+        //     }        }
+    </script>
+    </div>
+
+</body>
+</html>
